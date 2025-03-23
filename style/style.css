@@ -52,7 +52,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #222222;
-    font-size: 12px;
+    font-size: 14px;
     transition: transform 0.3s ease, color 0.5s ease
 }
 
@@ -67,7 +67,7 @@ nav ul li a:hover {
     margin-right: 20px;
     text-decoration: none;
     color: #FD8D3A;
-    font-size: 12px;
+    font-size: 14px;
     display: inline-block;
     transition: transform 0.3s ease, color 0.6s ease;
 }
@@ -82,39 +82,49 @@ nav ul li a:hover {
 }
 
 
+/* section header responsiveness */
 
 @media (max-width: 576px) {
     .container {
         font-size: 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        justify-content: center;
+        padding-top: 10px;
+        margin-top: 100px;
     }
-    
+
+    .logo {
+        padding-left: 0;
+        text-align: center;
+    }
+
     .logo img {
         width: 13px;
     }
 
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
     nav ul li {
-        padding-right: 10px;
-        
+        padding-right: 0;
+        margin-bottom: 10px;
     }
 
     .login a {
-        padding-right: 10px;
+        padding-right: 0;
+        margin-top: 10px;
+        display: block;
+        text-align: center;
     }
 }
 
-@media (min-width: 577px) and (max-width: 769px) {
-    .container {
-        font-size: 13px;
-    }
-    
-    nav ul li {
-        padding-right: 15px;
-    }
 
-    .login a {
-        padding-right: 15px;
-    }
-}
+
 
 /* hero section */
 
@@ -235,7 +245,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative; 
-    transition: transform 0.3s ease-in-out; color 0.3s ease;
+    transition: transform 0.3s ease-in-out color 0.3s ease;
 }
 
 .card-1-discount:hover, .card-2-discount:hover, .card-3-discount:hover, .card-4-discount:hover {
@@ -338,6 +348,204 @@ nav ul li a:hover {
     text-decoration: line-through;
     color: #888;
 }
+
+/* responsiveness - hero*/
+
+@media (max-width: 576px) {
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .hero-img {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-explore {
+        margin-top: 40px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-explore .explore {
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .hero-explore .explore h4 {
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero-explore .explore h4 i {
+        font-size: 12px;
+        color: #FA7436;
+    }
+
+    .hero-explore .explore h4 p {
+        font-size: 10px;
+        color: gray;
+        padding-top: 6px;
+        text-align: center;
+    }
+
+    .hero-explore .explore a {
+        background-color: #FA7436;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        margin: 10px 0;
+        box-shadow: 0 2px 4px 0 rgba(11, 11, 11, 0.6);
+        transition: transform 0.8s ease, color 0.3s ease;
+        text-align: center;
+    }
+
+    .hero-explore .explore a:hover {
+        background-color: white;
+        padding: 12px;
+        color: #FA7436;
+        text-decoration: none;
+        border-radius: 10px;
+        margin: 10px 0;
+        box-shadow: 0 2px 4px 0 rgba(255, 98, 5, 0.6);
+        transform: scale(0.9);
+    }
+
+    .card-1-discount, .card-2-discount, .card-3-discount, .card-4-discount {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+        text-align: center;
+    }
+
+    .card-1-discount:hover, .card-2-discount:hover, .card-3-discount:hover, .card-4-discount:hover {
+        transform: scale(1.05);
+    }
+
+    .bg-discount {
+        width: 100%;
+        height: 150px;
+    }
+
+    .image-discount {
+        width: 100%;
+        height: 100%;
+        background: none;
+    }
+
+    .image-discount:hover {
+        opacity: 50%;
+    }
+
+    .book-now-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 15px;
+        background-color: #FF5733;
+        color: white;
+        font-size: 10px;
+        border: none;
+        border-radius: 5px;
+        opacity: 10%;
+        visibility: visible;
+        transition: opacity 0.3s ease-in-out, visibility 0.8s ease-in-out;
+        box-shadow: #222222;
+    }
+
+    .card-1-discount:hover .book-now-btn, .card-2-discount:hover .book-now-btn,
+    .card-3-discount:hover .book-now-btn, .card-4-discount:hover .book-now-btn {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .content-discount {
+        padding: 15px;
+        background-color: white;
+        text-align: center;
+    }
+
+    .upper-content-discount {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .city-name-discount {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .rating-discount {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .rating-discount i {
+        margin-left: 0px;
+    }
+
+    .footer-content-discount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .country-discount {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .price-discount {
+        text-align: left;
+    }
+
+    .discount-price {
+        font-size: 16px;
+        font-weight: bold;
+        color: #FF5733;
+    }
+
+    .original-price {
+        font-size: 14px;
+        text-decoration: line-through;
+        color: #888;
+    }
+}
+
 
 
 /* section vacation plan */
@@ -470,7 +678,7 @@ nav ul li a:hover {
 }
 
 .arrows{
-    padding-left: 200px;
+    padding-left: 900px;
 }
 
 .content {
@@ -582,6 +790,122 @@ nav ul li a:hover {
     padding: 2px 5px;
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 576px) {
+    .contents {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contents div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .contents div p {
+        width: 100%;
+        left: 0;
+    }
+
+    .contents div img {
+        width: 50px;
+        height: 45px;
+        padding-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .container1 {
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    .container1 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container1 h4 {
+        font-size: 18px;
+    }
+
+    .container1 p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .card-content h1 {
+        font-size: 24px;
+    }
+
+    .card-content p {
+        width: 100%;
+        left: 0;
+        font-size: 14px;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .rating, .location {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location span {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+}
+
+/* For medium-sized devices (576px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .contents {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contents div p {
+        width: 80%;
+    }
+
+    .content {
+        gap: 40px;
+    }
+
+    .container1 {
+        width: 45%;
+    }
+
+    .container1 h4 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        width: 70%;
+        left: 15%;
+    }
+
+    .cards {
+        width: 48%;
+    }
+}
+
+
 /* About US */
 
 .container-aboutus {
@@ -608,28 +932,108 @@ nav ul li a:hover {
     padding: 35px;
     border-radius: 5px;
     margin-top: 90px;
+    opacity: 50%;
     margin-left: 150px;
     font-size: 18px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     z-index: 0;
-    transform: translateX(-450px) translateY(92px)
+    transform: translateX(-450px) translateY(92px);
 }
 
 .container-aboutus h4, .container-aboutus-1 h4 { 
     margin-bottom: 0px;  
-  }
+}
 
 .container-aboutus p, .container-aboutus-1 p{
     margin-top: 0px;
-} 
+}
 
 .fa-solid, .fas {
     font-size: 20px;
 }
-  
+
 .planes-three {
     position: relative;
-    transform: translateX(750px) translateY(-400px)
+    transform: translateX(750px) translateY(-400px);
+}
+
+img.lm {
+    height: 60px;
+    width: 60px;
+    z-index: 2;
+    position: relative;
+    transform: translateX(170px) translateY(48px);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 576px) {
+    .container-aboutus-1 {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin-left: 0;
+        margin-top: 30px;
+        opacity: 100%;
+        transform: translateX(0) translateY(0); /* Reset translation */
+        font-size: 14px;
+    }
+
+    .container-aboutus-1 h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .container-aboutus-1 p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .planes-three {
+        transform: translateX(0) translateY(0);
+        position: relative;
+        margin-top: 20px;
+    }
+
+    img.lm {
+        height: 50px;
+        width: 50px;
+        transform: translateX(0) translateY(0);
+        margin-left: 0;
+    }
+}
+
+/* For medium-sized devices (576px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .container-aboutus-1 {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 50px;
+        padding: 30px;
+        opacity: 80%;
+        font-size: 16px;
+        transform: translateX(0) translateY(0); /* Reset translation */
+    }
+
+    .container-aboutus-1 h4 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .container-aboutus-1 p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    img.lm {
+        height: 55px;
+        width: 55px;
+        margin-left: 0;
+        transform: translateX(100px) translateY(20px);
+    }
+
+    .planes-three {
+        transform: translateX(200px) translateY(-150px);
+    }
 }
 
 /* Blog */
@@ -644,58 +1048,131 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     height: 400px;
-  }
-  
-  .card-blog {
+}
+
+.card-blog {
     position: relative;
     width: 270px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    transition: all 0.3s ease;
+}
 
-  .card-blog:hover {
+.card-blog:hover {
     position: relative;
     width: 290px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  }
-  
-  .image-blog {
+}
+
+.image-blog {
     width: 100%;
     height: 270px;
     object-fit: cover;
-  }
-  
-  .content-blog {
+}
+
+.content-blog {
     position: absolute;
     width: 100%;
-    /* bottom: 20px; */
     left: 10px;
     padding: 0 10px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 4px;
     text-align: left;
-  }
-  
-  .date-blog {
+}
+
+.date-blog {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: #999999;
-  }
-  
-  .title-blog {
+}
+
+.title-blog {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     color: #222222;
     padding: 10px 50px 0px 0px;
-  }
-  
+}
+
+/* Mobile responsive styles */
+@media (max-width: 576px) {
+    .container-blog {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 20px;
+    }
+
+    .card-blog {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+
+    .image-blog {
+        height: 200px; /* Adjust height for mobile */
+    }
+
+    .content-blog {
+        padding: 10px;
+        left: 0;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .date-blog {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .title-blog {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 10px 0;
+    }
+}
+
+/* Tablet responsive styles */
+@media (min-width: 577px) and (max-width: 768px) {
+    .container-blog {
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .card-blog {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .image-blog {
+        height: 230px; /* Adjust height for tablet */
+    }
+
+    .content-blog {
+        padding: 15px;
+        left: 0;
+        text-align: left;
+    }
+
+    .date-blog {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .title-blog {
+        font-size: 15px;
+        line-height: 20px;
+        padding: 10px 50px 0px 0px;
+    }
+}
+
   
 
 
@@ -706,16 +1183,18 @@ nav ul li a:hover {
     color: white;
     padding: 40px;
     text-align: center;
-    margin: 50px 500px 50px 500px;
+    margin: 50px 300px 50px 300px;
     border-radius: 40px;
     height: 400px;
 }
 
 .subscribe h1 {
-    margin-top: 80px;
-    font-size: 34px;
+    font-family: "Volkhov", serif;
+    margin-top: 80px ;
+    font-size: 44px;
     margin-bottom: 40px;
-    font-family, 'Volkhov', sans-serif;
+    text-wrap: wrap;
+    
 }
 
 .subscribe form {
@@ -727,6 +1206,7 @@ nav ul li a:hover {
 .subscribe .email-img {
     position: relative;
     left: 30px;
+    z-index: 2;
 }
 
 .subscribe input[type="email"] {
@@ -735,6 +1215,7 @@ nav ul li a:hover {
     border: 1px solid #fff;
     margin-right: 10px;
     width: 400px;
+    z-index: 1;
 }
 
 
