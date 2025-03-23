@@ -1247,15 +1247,15 @@ img.lm {
 
 .img1 {
     position:relative;
-    left: 620px;
-    bottom: 570px;
+    left: 800px;
+    bottom: 500px;
     width: 90px;
 }
 
 .img2 {
     position:relative;
-    left: -230px;
-    top: -190px;
+    left: -410px;
+    top: -140px;
     z-index: 0;
 }
 
