@@ -93,6 +93,14 @@ nav ul li a:hover {
         justify-content: center;
         padding-top: 10px;
         margin-top: 100px;
+        
+    }
+
+    .html, body {
+        overflow-x: hidden; 
+        margin: 0;  
+        padding: 0; 
+        max-width: 100%;
     }
 
     .logo {
@@ -1543,7 +1551,6 @@ footer {
     color: #babcbf;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .subscribe-section {
         margin: 50px 20px 50px 20px;
@@ -1567,15 +1574,15 @@ footer {
     }
 
     .img1, .img2 {
-        position: relative;
-        left: 0;
-        width: 70px;
+        display: none;
+        visibility: hidden;
     }
 
     footer .footer-content {
-        margin: 20px;
+        margin: 200px 0px 90px 0px;
         flex-direction: column;
         align-items: center;
+        
     }
 
     footer .footer-left, .footer-columns {
@@ -1586,6 +1593,7 @@ footer {
     .footer-bottom {
         flex-direction: column;
         align-items: center;
+        padding: 100px;
     }
 
     .social-icons {
@@ -1602,18 +1610,18 @@ footer {
         width: 100%;
     }
 
+    .subscribe .email-img {
+        display: none;
+        visibility: hidden;
+    }
+
     .img1 {
-        width: 60px;
+        display: none;
+        visibility: hidden;
     }
 
     .img2 {
-        left: -150px;
-        top: -90px;
+        display: none;
+        visibility: hidden;
     }
 }
-
-
-
-
-
-
